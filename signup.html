@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sign Up • VynelixAi Enterprises</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="auth-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Go to home">
+          <img src="images/logo.png" alt="VynelixAi logo" class="brand-logo brand-logo-lg" />
+          <span class="brand-text">VynelixAi Enterprises</span>
+        </a>
+        <nav class="nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="service.html">Services</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+          <a class="btn btn-outline" href="login.html">Sign in</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="auth-hero">
+        <div class="container">
+          <div class="auth-hero__bg" aria-hidden="true"></div>
+          <div class="auth-hero__content">
+            <h1 class="auth-title">Create your account</h1>
+            <p class="auth-subtitle">Join VynelixAi to build modern AI experiences.</p>
+
+            <form class="auth-card" method="get" action="index.html" aria-labelledby="signup-title">
+              <h2 id="signup-title" class="sr-only">Sign up</h2>
+
+              <label class="field">
+                <span class="field__label">Full name</span>
+                <input class="field__input" type="text" name="name" placeholder="Your name" required />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Email</span>
+                <input class="field__input" type="email" name="email" placeholder="you@company.com" required />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Password</span>
+                <input class="field__input" type="password" name="password" placeholder="Create a password" required />
+              </label>
+
+              <label class="field">
+                <span class="field__label">Confirm password</span>
+                <input class="field__input" type="password" name="confirm" placeholder="Repeat password" required />
+              </label>
+
+              <div class="auth-actions">
+                <button class="btn btn-primary" type="submit">Create account</button>
+                <a class="muted-link" href="login.html">Already have an account? Sign in</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="small">&copy; <time>2025</time> VynelixAi Enterprises — Bangalore</p>
+        <nav class="nav small" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="service.html">Services</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
