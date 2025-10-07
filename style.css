@@ -1,15 +1,15 @@
 /* Design tokens: 5 colors max, 2 font families */
 :root {
-  --bg: #000000; 
-  --text: #ffa447; 
-  --muted: #d69145; 
-  --primary: #ff7a00; 
-  --accent: #ffb86b; 
+  --bg: #ffffff; /* white background */
+  --text: #0b3b8b; /* primary blue text */
+  --muted: #64748b; /* neutral slate for secondary text */
+  --primary: #1e40ff; /* action blue */
+  --accent: #60a5fa; /* light blue accent */
 
-  --surface: #0d0d0e;
-  --border: #1f1f22; 
-  --border-soft: #141417; 
-  --border-dashed: #2a2a2e;
+  --surface: #ffffff; /* cards/surfaces now light */
+  --border: #e5e7eb;
+  --border-soft: #f1f5f9;
+  --border-dashed: #e2e8f0;
 
   --radius: 14px;
   --container: 1120px;
@@ -114,14 +114,14 @@ p {
 
 /* Header */
 .site-header {
-  position: relative;
+  position: sticky;
   top: 0;
   z-index: 50;
-  background: #000000; /* white header bar */
+  background: #ffffff; /* white header bar */
   -webkit-backdrop-filter: none; /* remove glass effect */
   backdrop-filter: none;
   border-bottom: 1px solid var(--border);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08); /* gentle separation on dark page */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06); /* gentle separation on dark page */
 }
 .site-header .brand,
 .site-header .brand-text,
@@ -141,7 +141,7 @@ p {
 }
 .site-header .btn-primary {
   background: var(--primary);
-  color: #0b0b0b; 
+  color: #ffffff; /* readable on orange */
   border-color: var(--border);
 }
 .site-header .btn-ghost,
@@ -177,8 +177,8 @@ p {
   color: var(--text);
 }
 .brand-logo {
-  height: 32px;
-  width: 32px;
+  height: 64px; /* bigger logo */
+  width: auto;
   object-fit: contain;
   display: block;
 }
@@ -259,7 +259,7 @@ p {
 }
 .btn-primary {
   background: var(--primary);
-  color: #0b0b0b; /* readable on orange */
+  color: #ffffff; /* readable on orange */
 }
 .btn-ghost {
   background: transparent;
@@ -286,7 +286,7 @@ p {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   border-bottom: 1px solid var(--border-soft);
-  filter: saturate(115%) contrast(102%);
+  filter: none; /* light variants for sections previously tuned for dark */
 }
 .hero-content {
   position: relative;
@@ -374,7 +374,7 @@ p {
   color: var(--muted);
 }
 
-/* Cards / Service */
+/* Cards / Solutions */
 .cards {
   display: grid;
   gap: var(--space-6);
@@ -401,7 +401,7 @@ p {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  filter: saturate(115%) contrast(102%);
+  filter: none; /* light variants for sections previously tuned for dark */
 }
 .card-body {
   padding: var(--space-6);
@@ -416,8 +416,8 @@ p {
   border-color: var(--border-dashed);
   border-radius: var(--radius);
   padding: var(--space-8);
-  color: var(--muted);
-  background: #0b0b0c;
+  color: #334155; /* light variants for sections previously tuned for dark */
+  background: #f8fafc;
 }
 
 /* CTA */
@@ -430,7 +430,7 @@ p {
   border-color: var(--border);
   border-radius: var(--radius);
   padding: var(--space-8);
-  background: color-mix(in oklab, var(--bg) 90%, var(--accent));
+  background: #f0f7ff; /* light variants for sections previously tuned for dark */
 }
 @media (min-width: 860px) {
   .cta-inner {
@@ -579,10 +579,10 @@ input::placeholder {
   height: 38px;
   border-radius: 10px;
   border-color: var(--border);
-  background: #101012;
+  background: #ffffff;
 }
 .icon-btn:hover {
-  background: #151519;
+  background: #ffffff;
   text-decoration: none;
 }
 .icon {
@@ -606,4 +606,44 @@ input::placeholder {
 }
 .media-frame figcaption {
   padding: var(--space-4) var(--space-6);
+}
+
+/* Contact page: map and social icon styles */
+.media-frame iframe {
+  width: 100%;
+  height: 260px;
+  border: 0;
+  display: block;
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  margin-top: var(--space-6);
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--primary);
+  transition: background .2s ease, transform .1s ease;
+}
+.social-link:hover,
+.social-link:focus-visible {
+  text-decoration: none;
+  background: #f0f7ff;
+  outline: 2px solid transparent;
+  transform: translateY(-1px);
+}
+.icon-24 {
+  width: 24px;
+  height: 24px;
 }
